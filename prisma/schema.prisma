@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id               String   @id @default(cuid())
+  email            String   @unique
+  name             String?
+  password         String   @default("no-auth")
+  currentStreak    Int      @default(0)
+  executionScore   Int      @default(0)
+  completedTasks   Int      @default(0)
+  peakEnergyStart  Int      @default(9)
+  peakEnergyEnd    Int      @default(11)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  tasks            Task[]
+  shameEntries     WallOfShame[]
+}
+
+model Task {
+  id               String    @id @default(cuid())
+  title            String
+  status           String    @default("TODO")
+  complexity       Int       @default(1)
+  mode             String    @default("QUICK")
+  futureProjection String?
+  frictionScore    Float?
+  initialDelay     Int?
+  idleTime         Int?
+
+  allocatedMinutes Int?
+  actualSeconds    Int?
+  breakSeconds     Int       @default(0)
+  startedAt        DateTime?
+  completedAt      DateTime?
+  notes            String?
+
+  parentId         String?
+  parent           Task?     @relation("SubTasks", fields: [parentId], references: [id])
+  subTasks         Task[]    @relation("SubTasks")
+
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  userId           String?
+  user             User?     @relation(fields: [userId], references: [id])
+}
+
+model WallOfShame {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id])
+  taskTitle  String
+  reason     String   @default("Commitment broken")
+  createdAt  DateTime @default(now())
+}
