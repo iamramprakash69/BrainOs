@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 Second Brain OS - The Execution Engine
 
-## Getting Started
+> **Stop collecting ideas. Start executing them.**
 
-First, run the development server:
+[![Live Demo](https://img.shields.io/badge/Demo-Live-green)](https://kinetic-sable-beta.vercel.app)
+[![Tech Stack](https://img.shields.io/badge/Stack-Next.js%20%7C%20Prisma%20%7C%20PostgreSQL-blue)](#tech-stack)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌪️ What is Second Brain OS?
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Most "Second Brain" apps are just digital cemeteries—places where ideas go to die. **Second Brain OS** is different. It's a proactive **Execution Engine** built for high-performance students and professionals.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+It transforms vague ideas into structured, time-bound action plans using AI and enforces execution through behavioral psychology and gamification.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1. 🔮 The Anti-Gravity Input
+Type any idea, no matter how vague. Our AI breakdown engine transforms it into a **Day 1 Action Plan** with micro-steps, complexity scores, and future projections.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. 🌀 The Focus Tunnel
+A zero-distraction execution environment. Once you start a task, the UI "locks in," providing only a timer, your next action, and a "Break" button.
 
-## Deploy on Vercel
+### 3. 📊 Friction Radar
+A real-time "Mental Resistance" meter. If you procrastinate on a task, the radar turns Red, triggering **Atomic Breakdown Mode**—converting the task into a 2-minute version to lower the barrier to entry.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. 💀 The Wall of Shame
+Failed a commitment? Aborted a mission? You're added to the public Wall of Shame. Accountability is the best productivity hack.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 5. 📡 Shadow Learner (Preview)
+Integrations for **WhatsApp**, **Gmail**, and **Google Classroom**. The AI "listens" to your digital life and automatically pushes tasks to your board.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** Next.js 15 (App Router), Tailwind CSS, Framer Motion, Lucide Icons.
+- **Backend:** Next.js API Routes, Prisma ORM.
+- **Database:** PostgreSQL (Hosted on Neon.tech).
+- **AI:** OpenAI GPT-4o (Task Breakdown & Future Projections).
+- **Deployment:** Vercel.
+
+---
+
+## 📦 Installation & Setup
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/iamramprakash69/BrainOs.git
+    cd BrainOs
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Set up environment variables:**
+    Create a `.env` file with your `DATABASE_URL` (PostgreSQL) and `OPENAI_API_KEY`.
+
+4.  **Push the database schema:**
+    ```bash
+    npx prisma db push
+    ```
+
+5.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+---
+
+## 🤝 Roadmap
+
+- [ ] **AI Voice Integration:** Speak to your Second Brain to log tasks.
+- [ ] **Collaborative Missions:** Team-based execution with shared streaks.
+- [ ] **Mobile Companion App:** For passive notification listening.
+
+---
+
+## 📄 License
+MIT License. Built with ❤️ for the [Hackathon Name] 2026.
